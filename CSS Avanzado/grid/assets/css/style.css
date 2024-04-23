@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --bg: #0F0F0F;
+    --primary: #008170;
+    --border: #ccc;
+    --text: #000;
+    --white: #fff;
+    --font: "Open Sans", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+        'nav nav'
+        'header header'
+        'article aside'
+        'related related'
+        'footer footer'
+    ;
+}
+
+.main-menu {
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    grid-area: nav;
+}
+
+.main-menu .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.main-menu a {
+    color: #fff;
+}
+
+.main-menu a:hover {
+    color: var(--primary);
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header {
+    background: url("../img/header.jpg");
+    background-position: center 60%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin-bottom: 2rem;
+    grid-area: header;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+article {
+    padding: 2rem;
+    grid-area: article;
+}
+
+article h2 {
+    margin-bottom: 2rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+aside {
+    border-left: 1px solid var(--border);
+    padding: 2rem 1rem;
+    grid-area: aside;
+}
+
+aside .widget {
+    margin-bottom: 2rem;
+}
+
+aside .widget h3 {
+    margin-bottom: 0.5rem;
+}
+
+aside .widget ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+aside .widget a {
+    color: var(--primary);
+}
+
+aside .widget a:hover {
+    text-decoration: underline;
+}
+
+.related-posts {
+    padding: 3rem 2rem;
+    grid-area: related;
+}
+
+.related-posts h3 {
+    margin-bottom: 1rem;
+}
+
+.post-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.related-posts .card {
+    text-align: center;
+}
+
+.related-posts .card a {
+    color: var(--text);
+}
+
+.related-posts .card a:hover {
+    color: var(--primary);
+}
+
+.related-posts .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--bg);
+    color: var(--white);
+    padding: 2rem;
+}
+
+footer .info {
+    width: 40%;
+}
+
+footer .info p {
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer ul a {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+footer ul a:hover {
+    text-align: underline;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding: 1rem;
+    margin-top: 1rem;
+}
