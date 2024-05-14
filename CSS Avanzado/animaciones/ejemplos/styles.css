@@ -1,0 +1,177 @@
+main {
+    padding: 0 3rem;
+}
+
+/* Transiciones */
+.btn {
+    background: blue;
+    color: #fff;
+    padding: 0.25rem 1rem;
+    border: none;
+    width: 200px;
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+/* 
+    Una transición 
+*/
+.btn-1 {
+    transition: background 0.2s ease-in;
+}
+
+.btn-1:hover {
+    background: orange;
+}
+
+
+/* 
+    Multiples transiciones 
+
+    Acá background y width tienen comportamientos diferentes. En el caso de 
+    width se utiliza el delay para que este cambio ocurra justo despues del
+    cambio de background.
+*/
+.btn-2 {
+    transition: 
+        background 0.2s ease-in, 
+        width 0.5s ease 0.2s;
+}
+
+.btn-2:hover {
+    background: orange;
+    width: 300px;
+}
+
+
+/* 
+    Aplicar una transición a todos las propiedades animables.
+
+    En este ejemplo se modifica background, width y padding, pero todos los cambios
+    ocurren a la vez y con el mismo comportamiento
+*/
+.btn-3 {
+    transition: all 0.2s ease-out;
+}
+
+.btn-3:hover {
+    background: orange;
+    width: 300px;
+    padding: 1rem;
+}
+
+
+
+/* Transformaciones */
+.box {
+    width: 100px;
+    height: 100px;
+    display: block;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.box-1 {
+    background: red;
+}
+
+.box-1:hover {
+    transform: translateX(200px);
+}
+
+.box-2 {
+    background: blue;
+}
+
+.box-2:hover {
+    transform: rotate(45deg);
+}
+
+.box-3 {
+    background: green;
+}
+
+.box-3:hover {
+    transform: skewX(15deg)
+}
+
+.box-4 {
+    background: purple;
+}
+
+.box-4:hover {
+    transform: scale(1.25)
+}
+
+.box-5 {
+    background: skyblue;
+}
+
+.box-5:hover {
+    transform: rotate(45deg) scale(1.25);
+}
+
+
+/* Animaciones */
+
+/* 
+    Se especifica nombre de la animación, duración,
+    función de tiempo (linear, ease, ease-in, etc),
+    opcionalmente cantidad de veces que se repite la animación
+    (en este caso infinito). Tambien se puede indicar la dirección 
+*/
+.spinner {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin-bottom: 3rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* Animación con multiples pasos */
+.box-move {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: move 2s linear infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        background: red;
+        transform: translateX(0)
+    }
+
+    25% {
+        background: blue;
+    }
+
+    50% {
+        background: green;
+    }
+
+    75% {
+        background: purple;
+    }
+
+    100% {
+        background: skyblue;
+        transform: translateX(400px);
+    }
+}
