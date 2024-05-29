@@ -1,0 +1,11 @@
+.text-style {
+    color: #0000ff;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
