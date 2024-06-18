@@ -1,0 +1,37 @@
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.producto {
+    padding: 10px;
+    background: lightgray;
+}
+
+.producto img {
+    width: 100%;
+}
+
+.producto .indicador {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.producto .indicador.rojo {
+    background: red;
+}
+
+.producto .indicador.azul {
+    background: blue;
+}
+
+.producto .agotado {
+    display: none;
+}
+
+.producto .agotado.mostrar {
+    display: block;
+}
