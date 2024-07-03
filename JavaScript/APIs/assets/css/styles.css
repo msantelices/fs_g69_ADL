@@ -1,0 +1,8 @@
+.name {
+    text-transform: capitalize;
+}
+
+.type {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
